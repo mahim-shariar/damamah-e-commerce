@@ -1,25 +1,38 @@
-import FeaturedProducts from "./components/Home/FeaturedProducts";
-import HeroSection from "./components/Home/HeroSection";
-import NextGenCategories from "./components/Home/NextGenCategories";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./layout";
+import HomePage from "./page/HomePage";
+import ProductListingPage from "./page/ProductListingPage";
+import ProductViewPage from "./page/ProductViewPage";
 
-import StorytellingCarousel from "./components/Home/StorytellingCarousel";
-import NextGenNavbar from "./Shared/NextGenNavbar";
+// Create a router configuration
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/products",
+        element: <ProductListingPage />,
+      },
+      {
+        path: "/products-view-page",
+        element: <ProductViewPage />,
+      },
+      // Add other routes here as needed
+      // {
+      //   path: "/about",
+      //   element: <AboutPage />,
+      // },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <div className="font-sans antialiased text-gray-900 relative overflow-x-hidden">
-      {/* Custom cursor effect */}
-      <div className="mb-20">
-        <NextGenNavbar />
-      </div>
-      <HeroSection />
-      {/* <StorytellingCarousel /> */}
-      <NextGenCategories />
-      <FeaturedProducts />
-
-      {/* More sections would go here */}
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
