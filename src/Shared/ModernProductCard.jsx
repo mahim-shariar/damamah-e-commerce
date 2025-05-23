@@ -177,12 +177,6 @@ const ModernProductCard = ({
             >
               {title}
             </motion.h3>
-            <motion.p
-              className="text-sm text-amber-800/70 line-clamp-2 h-10"
-              whileHover={{ color: "#92400e" }} // amber-800
-            >
-              {description}
-            </motion.p>
           </div>
 
           <div className="mt-auto">

@@ -23,8 +23,7 @@ const StorytellingCarousel = () => {
       subtitle: "Starting the day with grace",
       description:
         "Our lightweight chiffon burka is perfect for morning routines, offering comfort without compromising on style.",
-      image:
-        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+      image: "/image/product-1.jpg",
       scene: "morning",
       color: "from-amber-50 to-amber-100",
       accent: "bg-amber-600",
@@ -121,48 +120,8 @@ const StorytellingCarousel = () => {
   return (
     <section className="relative py-20 bg-gradient-to-br from-white to-gray-50 overflow-hidden">
       {/* Premium header with animated gold accent */}
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center mb-16">
-          <div className="relative inline-block">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4 text-center"
-            >
-              Modern Modesty in Motion
-            </motion.h2>
-            <motion.div
-              className="absolute bottom-0 left-0 h-1 bg-amber-600"
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
-            />
-          </div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-lg text-gray-600 max-w-2xl text-center"
-          >
-            A day in the life with our collections - where tradition meets
-            contemporary design
-          </motion.p>
-        </div>
-      </div>
 
       {/* Luxury progress indicator */}
-      <div className="relative h-2 bg-gray-100 mx-6 mb-12 max-w-6xl mx-auto rounded-full overflow-hidden">
-        <motion.div
-          className={`absolute top-0 left-0 h-full bg-gradient-to-r from-amber-500 to-amber-700`}
-          initial={{ width: 0 }}
-          animate={{
-            width: `${100 / stories.length}%`,
-            x: `${activeStory * (100 / stories.length)}%`,
-          }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        />
-      </div>
 
       {/* Premium horizontal carousel */}
       <div className="relative h-[85vh] min-h-[600px]">
