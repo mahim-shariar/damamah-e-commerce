@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Gold color palette */
+  --color-gold-50: #faf7e8;
+  --color-gold-100: #f5efd1;
+  --color-gold-200: #ebdfa3;
+  --color-gold-300: #e5b849;
+  --color-gold-400: #d4a017;
+  --color-gold-500: #cdaf19;
+  --color-gold-600: #b8860b;
+  --color-gold-700: #7b690f;
+  --color-gold-800: #52460a;
+  --color-gold-900: #292305;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* For the parallax effect */
+.parallax-layer {
+  will-change: transform;
+}
